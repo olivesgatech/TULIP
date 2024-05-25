@@ -1,0 +1,26 @@
+[build-system]
+requires = ["poetry"]
+build-backend = "poetry.masonry.api"
+
+[tool.poetry]
+name= "USPEC-LD"
+version = "3.1.1"
+authors = ["Ryan Benkert <rbenkert3@gatech.edu>"]
+description = "USPEC-LD"
+
+[tool.poetry.dependencies]
+python = "^3.8.0"
+tqdm = "^4.31.1"
+pandas = "^1.0.2"
+torch = "^1.10.0"
+torchvision = "^0.11.0"
+tensorboardX = "^2.4.0"
+matplotlib = "^3.4.2"
+scipy = "^1.6.1"
+toml = "^0.10.1"
+scikit-image = "^0.18.1"
+openpyxl = "^3.0.6"
+gpytorch = "^1.6.0"
+# pytorch-ignite = "^0.4.10"
+scikit-learn = "^1.2.0"
+# mayavi = "^4.7.1"
