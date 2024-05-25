@@ -8,7 +8,7 @@ loss = 'ce'
 pretrained = false
 fix_seed = false
 init_seed = 0
-epochs = 200
+epochs = 400
 batch_size = 128
 test_batch_size = 10
 gradient_penalty = false
@@ -19,7 +19,6 @@ optimizer = 'sgd'
 scheduler = 'multiLR'
 multiLR_steps = 2
 gamma = 0.2
-scheduler_warmup = 'none'
 
 [segmentation]
 track_statistics = true
@@ -44,16 +43,16 @@ save_uspec_mean = true
 
 [run_configs]
 ensemble = -1
-output_folder_name = 'run_sdn_sngp_rn50'
-ld_folder_name = '/home/ryan/redo_final/LDUv1/CIFAR10/rcrop-rhflip-cutout/resnet50/paramsv0/sdn_sngp_resnet_org50v0.2.0/'
+output_folder_name = 'run_sdn_sngp_rn50_TEST'
+ld_folder_name = '/home/ryan/redo_final/LDUv1/CIFAR10/rcrop-rhflip-cutout/resnet50/paramsv0/sdn_sngp_resnet_org50v0.2.0_final/'
 resume = 'none'
 kl_loss = false
 scale_ics = false
 cuda = true
 gpu_id = 0
-train = true # when running with uspec analysis this flag will track predictions on the training set
-test = true # when running with uspec analysis this flag will track predictions on the test set
-val = true # only segmentation
+train = true
+test = true
+val = true
 num_lr_samples = 500
 create_validation = true
 scale_temperature = false
@@ -63,12 +62,12 @@ start_seed = 0
 end_seed = 1
 
 [run_configs.ood]
-svhn = false # only classification
+svhn = true # only classification
 mnist = false # only classification
 cifar10 = false # only classification
 stl10 = false # only classification
 cifar10C = false
-cifar100 = false
+cifar100 = true
 cifar100C = false
 cinic10 = false
 medMNIST = false
